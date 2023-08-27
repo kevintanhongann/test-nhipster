@@ -1,0 +1,200 @@
+{
+  "name": "Product",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "slug",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "skuNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "shortDescription",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "regularPrice",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "salePrice",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "published",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dateCreated",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dateModified",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "featured",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "taxStatus",
+      "fieldType": "TaxStatus",
+      "fieldValues": "TAXABLE,SHIPPING,NONE",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "manageStock",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "stockStatus",
+      "fieldType": "StockStatus",
+      "fieldValues": "IN_STOCK,OUT_OF_STOCK,ON_BACKORDER",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "soldIndividually",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "backOrders",
+      "fieldType": "BackOrders",
+      "fieldValues": "YES,NO,NOTIFY",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "weight",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "virtual",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "downloadable",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "downloadLimit",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "downloadExpiry",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "shippingRequired",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "shippingTaxable",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "parentId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "purchaseNote",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "catalogVisibility",
+      "fieldType": "CatalogVisibility",
+      "fieldValues": "VISIBLE,CATALOG,SEARCH,HIDDEN",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productImage",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "productImage"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productAttribute",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "productAttribute"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productVariation",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "productVariation"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productTag",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "productTag"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productCategory",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "productCategory"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productReview",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "productReview"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "productShippingClass",
+      "otherEntityRelationshipName": "product",
+      "relationshipValidateRules": "required",
+      "relationshipName": "productShippingClass",
+      "otherEntityField": "name",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "taxClass",
+      "otherEntityRelationshipName": "product",
+      "relationshipValidateRules": "required",
+      "relationshipName": "taxClass",
+      "otherEntityField": "name"
+    }
+  ],
+  "entityTableName": "product",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20230827033736"
+}

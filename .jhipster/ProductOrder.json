@@ -1,0 +1,66 @@
+{
+  "name": "ProductOrder",
+  "fields": [
+    {
+      "fieldName": "placedDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "OrderStatus",
+      "fieldValues": "PENDING,IN_DELIVERY,DELIVERED,CANCELLED",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "invoiceId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "deliveryOption",
+      "fieldType": "DeliveryOption",
+      "fieldValues": "SELF_PICKUP,DELIVERY",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "transaction",
+      "otherEntityRelationshipName": "productOrder",
+      "relationshipValidateRules": "required",
+      "relationshipName": "transaction",
+      "otherEntityField": "code",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "item",
+      "otherEntityRelationshipName": "productOrder",
+      "relationshipName": "item"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "productOrder",
+      "relationshipValidateRules": "required",
+      "relationshipName": "user",
+      "otherEntityField": "email"
+    }
+  ],
+  "entityTableName": "product_order",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20230827033747"
+}

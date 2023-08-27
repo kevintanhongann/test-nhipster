@@ -26,6 +26,26 @@ import '../content/scss/vendor.scss';
 import UserOAuth2Service from '@/entities/user/user.oauth2.service';
 /* tslint:disable */
 
+import BuyerService from '@/entities/buyer/buyer.service';
+import ProductService from '@/entities/product/product.service';
+import ProductImageService from '@/entities/product-image/product-image.service';
+import ProductTagService from '@/entities/product-tag/product-tag.service';
+import ProductCategoryService from '@/entities/product-category/product-category.service';
+import ProductAttributeService from '@/entities/product-attribute/product-attribute.service';
+import ProductAttributeTermService from '@/entities/product-attribute-term/product-attribute-term.service';
+import ProductReviewService from '@/entities/product-review/product-review.service';
+import ProductVariationService from '@/entities/product-variation/product-variation.service';
+import ProductShippingClassService from '@/entities/product-shipping-class/product-shipping-class.service';
+import CouponService from '@/entities/coupon/coupon.service';
+import ItemService from '@/entities/item/item.service';
+import ProductOrderService from '@/entities/product-order/product-order.service';
+import AddressService from '@/entities/address/address.service';
+import NotificationService from '@/entities/notification/notification.service';
+import InvoiceService from '@/entities/invoice/invoice.service';
+import TransactionService from '@/entities/transaction/transaction.service';
+import TaxRateService from '@/entities/tax-rate/tax-rate.service';
+import TaxClassService from '@/entities/tax-class/tax-class.service';
+import RefundService from '@/entities/refund/refund.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 /* tslint:enable */
@@ -81,6 +101,26 @@ new Vue({
     metricsService: () => new MetricsService(),
 
     userOAuth2Service: () => new UserOAuth2Service(),
+    buyerService: () => new BuyerService(),
+    productService: () => new ProductService(),
+    productImageService: () => new ProductImageService(),
+    productTagService: () => new ProductTagService(),
+    productCategoryService: () => new ProductCategoryService(),
+    productAttributeService: () => new ProductAttributeService(),
+    productAttributeTermService: () => new ProductAttributeTermService(),
+    productReviewService: () => new ProductReviewService(),
+    productVariationService: () => new ProductVariationService(),
+    productShippingClassService: () => new ProductShippingClassService(),
+    couponService: () => new CouponService(),
+    itemService: () => new ItemService(),
+    productOrderService: () => new ProductOrderService(),
+    addressService: () => new AddressService(),
+    notificationService: () => new NotificationService(),
+    invoiceService: () => new InvoiceService(),
+    transactionService: () => new TransactionService(),
+    taxRateService: () => new TaxRateService(),
+    taxClassService: () => new TaxClassService(),
+    refundService: () => new RefundService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService,
   },

@@ -1,0 +1,55 @@
+{
+  "name": "Refund",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "reason",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "orderCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "RefundStatus",
+      "fieldValues": "PENDING,COMPLETE",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "transaction",
+      "otherEntityRelationshipName": "refund",
+      "relationshipValidateRules": "required",
+      "relationshipName": "transaction",
+      "otherEntityField": "code",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "refund",
+      "relationshipValidateRules": "required",
+      "relationshipName": "user",
+      "otherEntityField": "email"
+    }
+  ],
+  "entityTableName": "refund",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20230827033754"
+}

@@ -29,6 +29,86 @@
             <font-awesome-icon icon="th-list" />
             <span class="no-bold">Entities</span>
           </span>
+          <b-dropdown-item to="/buyer">
+            <font-awesome-icon icon="asterisk" />
+            <span>Buyer</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/product">
+            <font-awesome-icon icon="asterisk" />
+            <span>Product</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/product-image">
+            <font-awesome-icon icon="asterisk" />
+            <span>Product Image</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/product-tag">
+            <font-awesome-icon icon="asterisk" />
+            <span>Product Tag</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/product-category">
+            <font-awesome-icon icon="asterisk" />
+            <span>Product Category</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/product-attribute">
+            <font-awesome-icon icon="asterisk" />
+            <span>Product Attribute</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/product-attribute-term">
+            <font-awesome-icon icon="asterisk" />
+            <span>Product Attribute Term</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/product-review">
+            <font-awesome-icon icon="asterisk" />
+            <span>Product Review</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/product-variation">
+            <font-awesome-icon icon="asterisk" />
+            <span>Product Variation</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/product-shipping-class">
+            <font-awesome-icon icon="asterisk" />
+            <span>Product Shipping Class</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/coupon">
+            <font-awesome-icon icon="asterisk" />
+            <span>Coupon</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/item">
+            <font-awesome-icon icon="asterisk" />
+            <span>Item</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/product-order">
+            <font-awesome-icon icon="asterisk" />
+            <span>Product Order</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/address">
+            <font-awesome-icon icon="asterisk" />
+            <span>Address</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/notification">
+            <font-awesome-icon icon="asterisk" />
+            <span>Notification</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/invoice">
+            <font-awesome-icon icon="asterisk" />
+            <span>Invoice</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/transaction">
+            <font-awesome-icon icon="asterisk" />
+            <span>Transaction</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/tax-rate">
+            <font-awesome-icon icon="asterisk" />
+            <span>Tax Rate</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/tax-class">
+            <font-awesome-icon icon="asterisk" />
+            <span>Tax Class</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/refund">
+            <font-awesome-icon icon="asterisk" />
+            <span>Refund</span>
+          </b-dropdown-item>
           <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
         </b-nav-item-dropdown>
         <b-nav-item-dropdown
